@@ -37,3 +37,7 @@ console.log(Math.round(Math.random() * (100 - 50)+50));
 console.log(Math.sign(0)); // -1 | 0 | 1
 
 console.log(Math.sqrt(2));
+
+console.log(Math.sign(0)); // -1 | 0 | 1
+
+console.log(Math.sqrt(2));
