@@ -76,3 +76,26 @@ if(respuesta==false) console.log(`Respuesta tiene el valor false`);
 
 if(respuesta) console.log(`Respuesta tiene el valor true`);
 if(!respuesta) console.log(`Respuesta tiene el valor false`);
+
+
+// Condicional con Switch
+
+
+
+let ingresoNum = parseInt(prompt('ingrese un dato de menu'));
+
+switch(ingresoNum){
+case 1:
+
+console.log('este es el num 1');
+break;
+case 2:
+    console.log('este es el num 2');
+break;
+
+default:
+    console.log('este es el num ninguno ');
+break;
+
+
+}
