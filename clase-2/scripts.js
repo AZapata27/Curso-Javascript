@@ -25,5 +25,6 @@ let prueba= 'hola mundo probando split';
 let res =  prueba.split(' ');
 
 console.log(res);
+console.log(res);
 
 
