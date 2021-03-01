@@ -36,6 +36,17 @@ for( let index in names){
 }
 
 
+for(let name of names){
+
+  console.log({name});
+}
+
+for( let index in names){
+  console.log(index);
+  console.log(names[index]);
+}
+
+
 
 
 
