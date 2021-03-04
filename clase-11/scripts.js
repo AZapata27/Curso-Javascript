@@ -37,7 +37,11 @@ title.classList.remove('main-title')
 if(title.classList.contains('title')) console.log('contiene title');
 else console.log('no contiene titulo');
 
-console.log('name');
-console.log('title');
+
+
+title.classList.replace('title','title-replaced')
+
+console.log(name.value.length);
+console.log(title.textContent);
 
 
