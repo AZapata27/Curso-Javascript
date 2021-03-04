@@ -49,6 +49,15 @@ console.log(name.value.length);
 console.log(title.textContent);
 console.log(name.value.length);
 console.log(title.textContent);
+console.log(title.textContent);
+console.log(name.value.length);
+console.log(title.textContent);
+console.log(title.textContent);
+console.log(name.value.length);
+console.log(title.textContent);
+console.log(title.textContent);
+console.log(name.value.length);
+console.log(title.textContent);
 
 
 
