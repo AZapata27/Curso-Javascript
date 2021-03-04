@@ -1,8 +1,8 @@
 // Manejo de DOM
 
-const title = document.getElementById('title')
+/* const title = document.getElementById('title') */
 
-title.textContent= 'accediendo a nodos desde el dom'
+/* title.textContent= 'accediendo a nodos desde el dom' */
 
 
 
@@ -15,3 +15,29 @@ console.log(paragraph);
 const span = paragraph.querySelector('span')
 
 console.log(span);
+
+
+
+const paragraphs = document.querySelectorAll('.paragraph')
+
+console.log(paragraphs);
+
+
+
+const name= document.getElementById('name')
+const title= document.getElementById('title')
+
+
+name.setAttribute('type','data')
+
+
+title.classList.add('main-title')
+title.classList.remove('main-title')
+
+if(title.classList.contains('title')) console.log('contiene title');
+else console.log('no contiene titulo');
+
+console.log('name');
+console.log('title');
+
+
