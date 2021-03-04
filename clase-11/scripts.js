@@ -43,5 +43,12 @@ title.classList.replace('title','title-replaced')
 
 console.log(name.value.length);
 console.log(title.textContent);
+console.log(name.value.length);
+console.log(title.textContent);
+console.log(name.value.length);
+console.log(title.textContent);
+console.log(name.value.length);
+console.log(title.textContent);
+
 
 
