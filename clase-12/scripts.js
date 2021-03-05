@@ -38,3 +38,5 @@ box.addEventListener('k',()=>{
 })
 
 const input = document.getElementById('input')
+
+
