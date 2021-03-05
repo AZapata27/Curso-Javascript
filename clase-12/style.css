@@ -1,0 +1,22 @@
+a , button{
+    display: block;
+    margin: 50px;
+}
+
+.box{
+    width: 500px;
+    height: 500px;
+    background-color: red;
+}
+
+
+
+
+.red{
+    background-color: red;
+}
+
+
+.blue{
+    background-color: blue;
+}
