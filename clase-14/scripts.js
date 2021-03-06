@@ -94,4 +94,8 @@ console.log(parent.parentElement.closest('H1')) ;
 parent.insertAdjacentElement('afterend', newElement)
 
 
-parent.replaceChild()
+
+console.log(parent.cloneNode(true));
+
+
+parent.remove()
