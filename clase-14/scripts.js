@@ -82,7 +82,16 @@ Cercano
 
 const parent= document.getElementById('parent')
 
+const newElement= document.createElement('LI')
+
+newElement.textContent='prueba'
 
 
-console.log(parent.parentElement.closest('H1'));
 
+console.log(parent.parentElement.closest('H1')) ;
+
+
+parent.insertAdjacentElement('afterend', newElement)
+
+
+parent.replaceChild()
