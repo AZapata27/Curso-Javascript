@@ -28,5 +28,19 @@ button.addEventListener('click',()=>{
 
 
     });
+    const newPost={
+        title: 'a new post',
+     body: 'lorem ipsum asdgasdgasgagafhfhdgggggggggggggggggggfhdfghdgfh'
+     , userId: 1
+    }
+    fetch('https://jsonplaceholder.typicode.com/users',{
+            method: 'POST',
+            body : JSON.stringify(newPost),
+            headers:{
+                        'Content-type': 'application/json'
+            }
+
+    }).then(res=>res.json())
+    .then(data=>console.log(data));
 
 });
