@@ -42,5 +42,13 @@ button.addEventListener('click',()=>{
 
     }).then(res=>res.json())
     .then(data=>console.log(data));
+    fetch('https://jsonplaceholder.typicode.com/users',{
+            method: 'POST',
+            body : JSON.stringify(newPost),
+            headers:{
+                        'Content-type': 'application/json'
+            }
 
+    }).then(res=>res.json())
+    .then(data=>console.log(data));
 });
