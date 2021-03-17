@@ -1,4 +1,6 @@
 const button = document.getElementById('button');
+const button = document.getElementById('button');
+
 
 
 button.addEventListener('click',()=>{
@@ -52,3 +54,4 @@ button.addEventListener('click',()=>{
     }).then(res=>res.json())
     .then(data=>console.log(data));
 });
+
