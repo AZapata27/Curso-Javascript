@@ -1,9 +1,4 @@
 const button = document.getElementById('button');
-
-const button = document.getElementById('button');
-
-const button = document.getElementById('button');
-
 const button = document.getElementById('button');
 
 
