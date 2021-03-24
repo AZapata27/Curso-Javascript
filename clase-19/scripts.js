@@ -1,162 +1,59 @@
-const getName = async () => {
-  return new Promise((resolver, reject) => {
-    setTimeout(() => {
-      resolver("Dorian");
-    }, 1500);
-  });
-};
+  
+const form = document.getElementById('form')
+const button = document.getElementById('submitButton')
 
+const name = document.getElementById('name')
+const email = document.getElementById('email')
+const gender = document.getElementById('gender')
+const terms = document.getElementById('terms')
 
-
-const sayHello=  async ()=>{
-
-    const name = await getName()
-    return `Hello ${name}`
+const formIsValid = {
+    name: false,
+    email: false,
+    gender: false,
+    terms: false
 }
 
 
 
-sayHello().then(res=>console.log(res))
+
+form.addEventListener('submit',(e)=>{
+
+    e.preventDefault()
+    validateForm()
+})
 
 
+name.addEventListener('change',(e)=>{
+
+    if(e.target.value.trim().length >0) formIsValid.name = true;
+})
+
+email.addEventListener('change',(e)=>{
+
+    if(e.target.value.trim().length >0) formIsValid.email = true;
+})
 
 
-async function funcionAsyncronadDeclarada (value){
+gender.addEventListener('change',(e)=>{
 
-       try {
-
-            console.log('inicio de async function');
-
-            let obj = cuadradoPromise
+    if(e.target.checked) formIsValid.gender = true;
+})
 
 
+terms.addEventListener('change',(e)=>{
 
-           
-       } catch (error) {
-           
-       }
+    formIsValid.terms= e.target.checked
+    e.target.checked ? button.removeAttribute('disabled') :
+    button.setAttribute('disabled', true)
+})
 
+const validateForm=()=>{
+
+    const formValues = Object.values(formIsValid)
+    const valid = formValues.findIndex(value=> value ==false)
+
+    if(valid==-1) form.submit()
+    else alert('Form invalid')
 
 }
-
-
-/* 
-
-
-
-
-
-
-button.addEventListener('click',()=>{
-
-
-    fetch('https://jsonplaceholder.typicode.com/users')
-    .then(res=>res.ok ? Promise.resolve(res): Promise.reject(res))
-    .then(res=>res.json())
-    .then(res=>{
-
-        const list = document.getElementById('list');
-
-        const fragment = document.createDocumentFragment();
-
-        for (const userInfo of res) {
-
-            const listItem=  document.createElement('LI');
-            listItem.textContent=  `${userInfo.id} - ${userInfo.name}`;
-
-            fragment.appendChild(listItem);
-            
-        }
-
-        
-        list.appendChild(fragment);
-
-
-
-    });
-    const newPost={
-        title: 'a new post',
-     body: 'lorem ipsum asdgasdgasgagafhfhdgggggggggggggggggggfhdfghdgfh'
-     , userId: 1
-    }
-    fetch('https://jsonplaceholder.typicode.com/users',{
-            method: 'POST',
-            body : JSON.stringify(newPost),
-            headers:{
-                        'Content-type': 'application/json'
-            }
-
-    }).then(res=>res.json())
-    .then(data=>console.log(data));
-    fetch('https://jsonplaceholder.typicode.com/users',{
-            method: 'POST',
-            body : JSON.stringify(newPost),
-            headers:{
-                        'Content-type': 'application/json'
-            }
-
-    }).then(res=>res.json())
-    .then(data=>console.log(data));
-});
- */
-const button = document.getElementById('button');
-
-button.addEventListener('click',()=>{
-            axios({
-                method: 'GET',
-                url: 'https://jsonplaceholder.typicode.com/users'
-
-
-
-            }).then(res=>{
-                
-                
-                const list = document.getElementById('list');
-
-                const fragment = document.createDocumentFragment();
-        
-                for (const userInfo of res.data) {
-        
-                    const listItem=  document.createElement('LI');
-                    listItem.textContent=  `${userInfo.id} - ${userInfo.name}`;
-        
-                    fragment.appendChild(listItem);
-                    
-                }
-        
-                
-                list.appendChild(fragment);
-
-
-            }).catch(err=>console.log(err))
-
-
-
-})
-
-
-
-button.addEventListener('click',()=>{
-    axios({
-        method: 'POST',
-        url: 'https://jsonplaceholder.typicode.com/users'
-        , data: {
-
-            title : ' a new post',
-            body: ' lorem ipsun anfk.asdbajkbfgakjdbkafb',
-            userId: 1            
-
-        }
-
-
-    }).then(res=>{
-        
-        
-       console.log(res.data);
-
-
-    }).catch(err=>console.log(err))
-
-
-
-})
