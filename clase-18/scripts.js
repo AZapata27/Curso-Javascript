@@ -133,3 +133,30 @@ button.addEventListener('click',()=>{
 
 
 })
+
+
+
+button.addEventListener('click',()=>{
+    axios({
+        method: 'POST',
+        url: 'https://jsonplaceholder.typicode.com/users'
+        , data: {
+
+            title : ' a new post',
+            body: ' lorem ipsun anfk.asdbajkbfgakjdbkafb',
+            userId: 1            
+
+        }
+
+
+    }).then(res=>{
+        
+        
+       console.log(res.data);
+
+
+    }).catch(err=>console.log(err))
+
+
+
+})
