@@ -17,3 +17,24 @@ const sayHello=  async ()=>{
 
 
 sayHello().then(res=>console.log(res))
+
+
+
+
+async function funcionAsyncronadDeclarada (value){
+
+       try {
+
+            console.log('inicio de async function');
+
+            let obj = cuadradoPromise
+
+
+
+           
+       } catch (error) {
+           
+       }
+
+
+}
